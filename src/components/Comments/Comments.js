@@ -18,13 +18,15 @@ class Comments extends Component {
         this.setState({comments})
     }
 
+    randomColor = () => Math.random() * (999999 - 100000) + 100000;
+
     render() {
         const {comments} = this.state;
         let {match:{url}} = this.props;
         return (
             <div>
                 {
-                    comments.map(value => <Comment item={value} key={value.id}/>)
+                    comments.map(value => <Comment item={value} key={value.id} color = {this.randomColor}/>)
                 }
                 <hr/>
                 <Switch>

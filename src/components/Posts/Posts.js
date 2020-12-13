@@ -17,13 +17,15 @@ class Posts extends Component {
         this.setState({posts})
     }
 
+    randomColor = () => Math.random() * (999999 - 100000) + 100000;
+
     render() {
         const {posts} = this.state;
         const {match:{url}} = this.props;
         return (
             <div>
                 {
-                    posts.map(value => <Post item={value} key={value.id}/>)
+                    posts.map(value => <Post item={value} key={value.id} color = {this.randomColor}/>)
                 }
                 <hr/>
                 <Switch>

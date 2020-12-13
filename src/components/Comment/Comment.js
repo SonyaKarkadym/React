@@ -1,14 +1,11 @@
 import React, {Component} from 'react';
-import {
-    withRouter,
-    Link
-} from "react-router-dom";
+import {Link, withRouter} from "react-router-dom";
 
 class Comment extends Component {
     render() {
-        const {item,match:{url}} = this.props;
+        const {item,match:{url},color} = this.props;
         return (
-            <div>
+            <div style={{background: `#${Math.floor(color())}`}}>
                 {item.id} - {item.name} - <Link to={url + "/" + item.id}>details</Link>
             </div>
         );
