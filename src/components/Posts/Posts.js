@@ -1,13 +1,8 @@
 import React, {Component} from 'react';
 import PostService from "../../service/PostService";
 import Post from "../Post/Post";
-import {
-    Switch,
-    Route,
-    withRouter
-} from "react-router-dom";
+import {Route, Switch, withRouter} from "react-router-dom";
 import FullPost from "../FullPost/FullPost";
-
 
 class Posts extends Component {
 
