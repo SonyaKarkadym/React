@@ -17,7 +17,7 @@ class FullUser extends Component {
 
     render() {
         const {user} = this.state;
-        //todo fill user with data
+
         return (
             <div>
                 {user && <div>{user.id}-{user.name}-{user.email}</div>}
